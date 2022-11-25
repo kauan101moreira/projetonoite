@@ -60,7 +60,7 @@ if( isset ($_POST ) && !empty($_POST) ){
 </form>
 
 <?php
-    $query = "select * from questoes order by rand() limit 2";
+    $query = "select * from questoes order by rand() limit 10";
     $resultado = mysqli_query($conexao, $query);
 
     while($linha = mysqli_fetch_array($resultado)){
