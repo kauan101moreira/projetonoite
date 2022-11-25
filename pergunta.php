@@ -1,6 +1,10 @@
 <?php 
 
+$titulo = "Faça sua pergunta!";
+$subtitulo = "Faça sua pergunta!";
+$migalhaPao = "Criador de perguntas";
 include "conexao.php" ;
+include "cabecalho.php" ;
 
 if( isset ($_POST ) && !empty($_POST) ){
     $pergunta = $_POST["pergunta"];
@@ -58,3 +62,7 @@ if( isset ($_POST ) && !empty($_POST) ){
 <button type="submit">Salvar Pergunta</button>
 
 </form>
+
+<?php
+include "rodape.php";
+?>
