@@ -22,44 +22,38 @@ if( isset ($_POST ) && !empty($_POST) ){
 ?>
 
 <form action="./pergunta.php" method="post">
-
-<h1>Pergunta: <textarea class="m-7" name="pergunta"></textarea></h1>
-
-
-
-<br><br>
-
-<label>A)</label>
-<input type="radio" name="correta" value="A" />
-<input type="text" name="A" />
-
-<br><br>
-
-<label>B)</label>
-<input type="radio" name="correta" value="B" />
-<input type="text" name="B" />
-
-<br><br>
-
-<label>C)</label>
-<input type="radio" name="correta" value="C" />
-<input type="text" name="C" />
-
-<br><br>
-
-<label>D)</label>
-<input type="radio" name="correta" value="D" />
-<input type="text" name="D" />
-
-<br><br>
-
-<label>E)</label>
-<input type="radio" name="correta" value="E" />
-<input type="text" name="E" />
-
-<br><br>
-
-<button class="btn btn-success" type="submit">Salvar Pergunta</button>
+    <div class="offset">
+        <div class="card-header">
+            <h1>Pergunta: <textarea class="m-7" name="pergunta"></textarea></h1>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <br><br>
+                <label>A)</label>
+                <input type="radio" name="correta" value="A" />
+                <input type="text" name="A" />
+                <br><br>
+                <label>B)</label>
+                <input type="radio" name="correta" value="B" />
+                <input type="text" name="B" />
+                <br><br>
+                <label>C)</label>
+                <input type="radio" name="correta" value="C" />
+                <input type="text" name="C" />
+                <br><br>
+                <label>D)</label>
+                <input type="radio" name="correta" value="D" />
+                <input type="text" name="D" />
+                <br><br>
+                <label>E)</label>
+                <input type="radio" name="correta" value="E" />
+                <input type="text" name="E" />
+                <br><br>
+            </blockquote>
+           </div>
+    </div>
+        
+        <button class="btn btn-success" type="submit">Salvar Pergunta</button>
 
 </form>
 
