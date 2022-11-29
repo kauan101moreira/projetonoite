@@ -23,8 +23,8 @@ if( isset ($_POST ) && !empty($_POST) ){
 
 <form action="./pergunta.php" method="post">
 
-<label>Pergunta</label>
-<textarea name="pergunta"></textarea>
+<h1>Pergunta: <textarea class="m-7" name="pergunta"></textarea></h1>
+
 
 
 <br><br>
@@ -59,7 +59,7 @@ if( isset ($_POST ) && !empty($_POST) ){
 
 <br><br>
 
-<button type="submit">Salvar Pergunta</button>
+<button class="btn btn-success" type="submit">Salvar Pergunta</button>
 
 </form>
 
