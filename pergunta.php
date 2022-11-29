@@ -24,7 +24,7 @@ if( isset ($_POST ) && !empty($_POST) ){
 <form action="./pergunta.php" method="post">
     <div class="offset">
         <div class="card-header">
-            <h1>Pergunta: <textarea class="m-7" name="pergunta"></textarea></h1>
+            <h1>Pergunta: <input class="m-7" name="pergunta"></input></h1>
         </div>
         <div class="card-body">
             <blockquote class="blockquote mb-0">

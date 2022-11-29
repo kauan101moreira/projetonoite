@@ -9,7 +9,7 @@ include "cabecalho.php" ;
 <h2>Respostas</h2>
 
 <?php
-$pontos = 0;
+$pontuacao = 0;
 if(isset($_POST) && !empty($_POST)){
     $valoresArray = array_keys($_POST);
     for($i=0; $i<count($valoresArray);$i++){
@@ -61,26 +61,34 @@ if(isset($_POST) && !empty($_POST)){
         }
     }  
     
-    if($pontuacao<5){
+    if($pontuacao==1){
         ?>
         <div class="m-3 alert alert-danger">
-            <h2 class="text-center">Sua Pontuação foi: <?php echo $pontuacao ?></h2>
+            <h2 class="text-center">Sua Pontuação foi abaixo da média, ela foi de: <?php echo $pontuacao ?> ponto.</h2>
+            <br/>
+        </div>
+        <?php
+    }else if($pontuacao<5){
+        ?>
+        <div class="m-3 alert alert-danger">
+            <h2 class="text-center">Sua Pontuação foi abaixo da média, ela foi de: <?php echo $pontuacao ?> pontos.</h2>
             <br/>
         </div>
         <?php
     }else{
         ?>
         <div class="m-3 alert alert-success">
-            <h2 class="text-center">Sua Pontuação foi: <?php echo $pontuacao ?></h2>
+            <h2 class="text-center">Sua Pontuação foi acima da média, ela foi de: <?php echo $pontuacao ?> pontos.</h2>
             <br/>
         </div>
         <?php
     }
 
 }else{
-    header("Location: ./index.php?mensagem=Voce Precisa Responder Alguma Pergunta!!!");
+    header("Location: ./index.php?mensagem=Voce Precisa Responder pelo menos uma pergunta!");
     exit();
 }
+
 include "rodape.php" ;
 
 function quebraLinha(){
